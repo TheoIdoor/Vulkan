@@ -1,0 +1,33 @@
+name: Build Forge mod
+
+on:
+  push:
+    branches:
+      - theoidoor-volcanic-biome-boss
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Build Forge mod
+        run: .\gradlew.bat build
+
+      - name: Upload mod JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Vulkan-forge-1.20.1
+          path: build/libs/*.jar
+          if-no-files-found: error

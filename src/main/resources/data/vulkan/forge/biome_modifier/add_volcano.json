@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "vulkan:volcanic_wastes",
+  "features": "vulkan:volcano",
+  "step": "surface_structures"
+}
