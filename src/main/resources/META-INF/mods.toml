@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="magmacraft"
+version="1.0.0"
+displayName="Magmacraft"
+description='''
+Fügt das vulkanische Asche-Ödland mit kochenden Gewässern, glühendem Asche-Holz,
+verbrannten Dörfern und der gigantischen Zwergen-Vulkanschmiede samt Magma-Golem-Boss hinzu.
+'''
+
+[[dependencies.magmacraft]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.magmacraft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.magmacraft]]
+    modId="terrablender"
+    mandatory=true
+    versionRange="[3.0.0.0,)"
+    ordering="AFTER"
+    side="BOTH"
